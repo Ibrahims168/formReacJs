@@ -26,7 +26,7 @@ StudentsRouter.post("/addStudents", async function(req, res) {
 
 
     try {
-        const dataBaseResponse = await studentDb.collection("Student").save(student)
+        const dataBaseResponse = await studentDb.save()
         res.send(dataBaseResponse)
     } 
     catch (error) {
